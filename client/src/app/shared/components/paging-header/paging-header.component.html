@@ -1,0 +1,14 @@
+<header>
+    <span *ngIf="tottalCounts && tottalCounts >0">
+         Showing <strong>
+        {{(pageNumber-1)* pageSize+1}}-
+        {{pageNumber * pageSize
+         >tottalCounts
+         ?tottalCounts 
+         :pageNumber * pageSize
+        }}
+    </strong> of <strong>{{tottalCounts}}</strong> Results </span>
+    <span *ngIf="tottalCounts===0">
+    There are <strong>0</strong> results for this filter
+    </span>
+</header>
